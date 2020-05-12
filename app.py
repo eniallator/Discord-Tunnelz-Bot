@@ -42,7 +42,7 @@ async def poll_loop():
 
         embed.add_field(
             name="Output",
-            value=str(output.stdout, "utf-8"),
+            value=str(output.stdout, "utf-8").strip() or "N/A",
             inline=False
         )
         if len(output.stderr) > 1:
@@ -51,7 +51,7 @@ async def poll_loop():
             embed.colour = 0xdc3545
             embed.add_field(
                 name="Error message",
-                value=str(output.stderr, "utf-8"),
+                value=str(output.stderr, "utf-8").strip() or "N/A",
                 inline=False
             )
         else:
