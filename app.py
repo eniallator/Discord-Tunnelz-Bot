@@ -34,7 +34,6 @@ async def poll_loop():
     while not CLIENT.is_closed():
         output = subprocess.run(
             POLLING["command"].split(),
-            shell=True,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE
         )
