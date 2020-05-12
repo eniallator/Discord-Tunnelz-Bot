@@ -1,0 +1,9 @@
+[discord]
+
+token = <token>
+
+[polling]
+
+command = echo I am very awesome
+interval = 10
+channel = general
